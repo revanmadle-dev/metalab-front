@@ -13,20 +13,22 @@ const nextConfig = {
                 port: '',
             },
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '1337',
+                protocol: 'https',
+                hostname: 'metalab-back.onrender.com',
+                port: '',
             }
         ],
     },
+
+    output: "standalone",
+
     webpack: (config) => {
         config.module.rules.push({
             test: /\.html$/,
             loader: 'html-loader',
         });
-        return config
+        return config;
     },
+};
 
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;
